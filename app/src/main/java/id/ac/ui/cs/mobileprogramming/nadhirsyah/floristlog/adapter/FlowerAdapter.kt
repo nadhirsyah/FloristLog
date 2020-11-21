@@ -49,11 +49,13 @@ class FlowerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     fun bindItem(context: Context, flower: Flower) {
         Log.d("RecipeAdapter", "bindItem")
         itemView.flowerTextList.text = flower.name
+        itemView.flowerPriceList.text = flower.price
         Picasso.get()
             .load(flower.img_link)
             .into(itemView.flowerImageList)
 
         itemView.setOnClickListener {
+            Log.d("log", "cek")
             val intent = Intent(context, FlowerDetailActivity::class.java)
             intent.putExtra("id",flower.id.toString())
             context.startActivity(intent)

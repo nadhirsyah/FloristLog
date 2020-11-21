@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FloristLog</string>
+    <string name="splash_text">Aplikasi oleh M Nadhirsyah Indra</string>
+    <string name="product">Produk</string>
+    <string name="add">Tambah</string>
+    <string name="review_text">Ulasan</string>
+    <string name="add_image">Tambah Gambar</string>
+    <string name="review_save">Simpan</string>
+    <string name="add_review">Tambah Ulasan</string>
+    <string name="list_product">Daftar Produk</string>
+    <string name="flower_add_review">Tambah Ulasan</string>
+    <string name="about">Tentang</string>
+</resources>

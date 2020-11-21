@@ -5,17 +5,21 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.dao.AboutInfoDAO
 import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.dao.FlowerDAO
 import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.dao.ReviewDAO
+import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.model.About
+import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.model.AboutInfo
 import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.model.Flower
 import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.model.Review
 import java.util.concurrent.Executors
 
-@Database(entities = [Flower::class, Review::class], version = 3, exportSchema = false)
+@Database(entities = [Flower::class, Review::class, AboutInfo::class], version = 4, exportSchema = false)
 abstract class FlowerDatabase : RoomDatabase() {
 
     abstract fun flowerDao() : FlowerDAO
     abstract fun reviewDao() : ReviewDAO
+    abstract fun aboutInfoDao() : AboutInfoDAO
 
     companion object{
         @Volatile

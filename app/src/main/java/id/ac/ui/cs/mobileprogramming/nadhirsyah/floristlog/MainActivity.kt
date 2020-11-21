@@ -14,7 +14,18 @@ class MainActivity : AppCompatActivity() {
         product.setOnClickListener{
             navToProductActivity()
         }
+        val about = findViewById<LinearLayout>(R.id.settings_ll)
+        about.setOnClickListener {
+            navToAboutActivity()
+        }
     }
+
+    private fun navToAboutActivity() {
+        val intent = Intent(this, AboutActivity::class.java).apply {
+        }
+        startActivity(intent)
+    }
+
     private fun navToProductActivity() {
         val intent = Intent(this, FlowerActivity::class.java).apply {
         }

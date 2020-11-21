@@ -16,7 +16,7 @@ data class Review(
     val text: String,
     @ColumnInfo(name="flowerId")
     val flowerID: String,
-
+    val imageUri:String,
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 )
