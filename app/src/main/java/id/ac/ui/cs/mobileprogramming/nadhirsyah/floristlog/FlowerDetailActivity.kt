@@ -13,12 +13,12 @@ import com.squareup.picasso.Picasso
 import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.adapter.FlowerDetailAdapter
 import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.adapter.ReviewAdapter
 import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.model.Flower
-import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.viewmodel.FlowerDetailViewModel
+import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.viewmodel.FlowerViewModel
 import id.ac.ui.cs.mobileprogramming.nadhirsyah.floristlog.viewmodel.ReviewViewModel
 import kotlinx.android.synthetic.main.activity_flower_detail.*
 
 class FlowerDetailActivity:AppCompatActivity() {
-    private lateinit var flowerDetailViewModel : FlowerDetailViewModel
+    private lateinit var flowerViewModel: FlowerViewModel
     private lateinit var flowerDetailAdapter: FlowerDetailAdapter
 
     private lateinit var reviewViewModel: ReviewViewModel
@@ -35,8 +35,8 @@ class FlowerDetailActivity:AppCompatActivity() {
             flowerId = intentExtras.getString("id")?.toInt()?: 0
         }
 
-        flowerDetailViewModel = ViewModelProvider(this).get(FlowerDetailViewModel::class.java)
-        flower = flowerDetailViewModel.getFlower(flowerId)!!
+        flowerViewModel = ViewModelProvider(this).get(FlowerViewModel::class.java)
+        flower = flowerViewModel.getFlower(flowerId)!!
         findViewById<TextView>(R.id.flowerDetailName).text = flower.name
         findViewById<TextView>(R.id.flowerDetailPrice).text = flower.price
         Picasso.get()

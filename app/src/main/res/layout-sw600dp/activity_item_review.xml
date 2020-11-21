@@ -18,8 +18,8 @@ card_view:contentPadding="4dp" >
 
     <ImageView
         android:id="@+id/reviewImageList"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -34,7 +34,7 @@ card_view:contentPadding="4dp" >
         android:layout_toEndOf="@+id/reviewImageList"
         android:layout_toRightOf="@+id/reviewImageList"
         android:textColor="@color/colorBlack"
-        android:textSize="26sp" />
+        android:textSize="30sp" />
 
 
 </RelativeLayout>

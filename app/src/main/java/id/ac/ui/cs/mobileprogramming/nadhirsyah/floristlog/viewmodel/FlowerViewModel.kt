@@ -11,10 +11,16 @@ class FlowerViewModel(application: Application) : AndroidViewModel(application) 
 
     private var flowerRepository = FlowerRepository(application)
     private var flowers : LiveData<List<Flower>>? = flowerRepository.getAllFlowers()
+    private lateinit var flower : Flower
 
     fun insertFlower(flower: Flower) {
         Log.d("insert", flower.id.toString())
         flowerRepository.insertFlower(flower)
+    }
+
+    fun getFlower(id: Int): Flower?{
+        flower = flowerRepository.getFlower(id)!!
+        return flower
     }
 
     fun getAllFlower(): LiveData<List<Flower>>? {
