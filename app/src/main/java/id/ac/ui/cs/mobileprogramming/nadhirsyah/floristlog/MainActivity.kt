@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         about.setOnClickListener {
             navToAboutActivity()
         }
+        val timer = findViewById<LinearLayout>(R.id.timer_ll)
+        about.setOnClickListener {
+            navToTimerActivity()
+        }
     }
 
     private fun navToAboutActivity() {
@@ -28,6 +32,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun navToProductActivity() {
         val intent = Intent(this, FlowerActivity::class.java).apply {
+        }
+        startActivity(intent)
+    }
+    private fun navToTimerActivity() {
+        val intent = Intent(this, TimerActivity::class.java).apply {
         }
         startActivity(intent)
     }
